@@ -9,14 +9,12 @@
 function reverseArray($a) {
     if (empty($a)) {
         return $a;
-    } else {
-        $subArray = array_slice($a, 1);
-        $result = reverseArray($subArray);
-        $result[] = $a[0];
-
-        return $result;
-
     }
+    $subArray = array_slice($a, 1);
+    $result = reverseArray($subArray);
+    $result[] = $a[0];
+
+    return $result;
 }
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
