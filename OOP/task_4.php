@@ -1,18 +1,25 @@
 <?php
-namespace  App\OOP;
 
 class Person
 {
     const SPECIES = "Homo Sapiens";
 
-    public static function greet($userName) {
-        return sprintf("Hello %s, my name is %s, nice to meet you!", $userName, self::SPECIES);
+    public function __construct(public string $name, public int $age, public string $occupation)
+    {
+    }
+
+    public function introduce()
+    {
+        return sprintf("Hello, my name is %s", $this->name);
+    }
+
+    public function describe_job()
+    {
+        return sprintf("I am currently working as a(n) %s", $this->occupation);
+    }
+
+    public static function greet_extraterrestrials($species)
+    {
+        return sprintf("Welcome to Planet Earth %s!", $species);
     }
 }
-
-$president_name = CurrentUSPresident::NAME;
-$greetings_from_president = CurrentUSPresident::greet('Ronald');
-
-echo PHP_EOL;
-echo $president_name . PHP_EOL;
-echo $greetings_from_president . PHP_EOL;

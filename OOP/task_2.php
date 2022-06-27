@@ -1,7 +1,5 @@
 <?php
 
-namespace App\OOP;
-
 class Person
 {
 
