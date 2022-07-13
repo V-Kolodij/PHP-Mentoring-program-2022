@@ -51,5 +51,6 @@
 # Embedded web-server pid file
 /.web-server-pid
 /.idea
-/.env
 /node_modules/.yarn-integrity
+/.env
+
